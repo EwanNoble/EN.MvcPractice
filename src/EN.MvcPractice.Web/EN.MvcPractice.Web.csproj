@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EN.MvcPractice.Core\EN.MvcPractice.Core.csproj" />
+    <ProjectReference Include="..\EN.MvcPractice.Infrastructure\EN.MvcPractice.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

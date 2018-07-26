@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EN.MvcPractice", "EN.MvcPractice\EN.MvcPractice.csproj", "{36073AB8-30F0-4236-9302-F3954C7E9E00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EN.MvcPractice.Web", "EN.MvcPractice.Web\EN.MvcPractice.Web.csproj", "{36073AB8-30F0-4236-9302-F3954C7E9E00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EN.MvcPractice.Core", "EN.MvcPractice.Core\EN.MvcPractice.Core.csproj", "{0BE7BCA0-14FF-4395-A9A7-CA4B3FE8F119}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EN.MvcPractice.Core", "EN.MvcPractice.Core\EN.MvcPractice.Core.csproj", "{0BE7BCA0-14FF-4395-A9A7-CA4B3FE8F119}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EN.MvcPractice.Infrastructure", "EN.MvcPractice.Infrastructure\EN.MvcPractice.Infrastructure.csproj", "{DC60CEE5-2AD3-4FB4-9329-35D3D6F23ECF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EN.MvcPractice.Infrastructure", "EN.MvcPractice.Infrastructure\EN.MvcPractice.Infrastructure.csproj", "{DC60CEE5-2AD3-4FB4-9329-35D3D6F23ECF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
