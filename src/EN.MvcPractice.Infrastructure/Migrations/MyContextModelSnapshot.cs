@@ -33,6 +33,10 @@ namespace EN.MvcPractice.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Titles");
+
+                    b.HasData(
+                        new { Id = 1, TitleColor = -16777216, TitleSize = 18, TitleText = "Homepage" }
+                    );
                 });
 #pragma warning restore 612, 618
         }

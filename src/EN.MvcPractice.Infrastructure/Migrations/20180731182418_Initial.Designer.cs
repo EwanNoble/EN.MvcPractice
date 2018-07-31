@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EN.MvcPractice.Infrastructure.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20180726205008_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20180731182418_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,6 +35,10 @@ namespace EN.MvcPractice.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Titles");
+
+                    b.HasData(
+                        new { Id = 1, TitleColor = -16777216, TitleSize = 18, TitleText = "Homepage" }
+                    );
                 });
 #pragma warning restore 612, 618
         }

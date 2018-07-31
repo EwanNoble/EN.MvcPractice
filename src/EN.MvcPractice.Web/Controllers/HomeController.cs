@@ -5,14 +5,28 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EN.MvcPractice.Models;
+using MediatR;
+using EN.MvcPractice.Core.Requests;
+using EN.MvcPractice.Web.Models;
 
 namespace EN.MvcPractice.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IMediator _mediator;
+
+        public HomeController(IMediator mediator)
         {
-            return View();
+            _mediator = mediator;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var title = await _mediator.Send(new GetFirstTitle()).ConfigureAwait(false);
+
+            var model = new HomeViewModel(title);
+
+            return View(model);
         }
 
         public IActionResult About()

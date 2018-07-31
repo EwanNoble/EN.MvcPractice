@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EN.MvcPractice.Core.IRepositories;
 using EN.MvcPractice.Infrastructure;
+using EN.MvcPractice.Infrastructure.Repositories;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,10 +36,14 @@ namespace EN.MvcPractice
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddMediatR();
+
             services.AddDbContext<MyContext>(options =>
                 options.UseSqlServer(Configuration["DatabaseConnectionString"]));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped<ITitleRepository, TitleRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +52,7 @@ namespace EN.MvcPractice
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
             }
             else
             {
